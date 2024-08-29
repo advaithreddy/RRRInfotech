@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import pages from "./pages/pages";
-const { Team, About, Home, Services, Industries, PandP } = pages;
+const { Team, About, Home, Services, Industries, PandP, Contact } = pages;
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/privacyandpolicy" element={<PandP />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

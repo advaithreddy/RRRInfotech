@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import backgroundImage from '../assets/images/127likeplace.jpg';
+import backgroundImage from '../assets/images/bkteam.jpg';
 
 function Team() {
     return (

@@ -4,6 +4,7 @@ import Home from "./Home";
 import Services from "./Services";
 import Industries from "./Industries";
 import PandP from "./PrivacyandPolicies";
+import Contact from "./Contact";
 
 const pages = {
     Team,
@@ -12,6 +13,7 @@ const pages = {
     Services,
     Industries,
     PandP,
+    Contact,
 };
 
 export default pages;

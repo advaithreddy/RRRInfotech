@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const location = useLocation();
 
   const handleMouseEnter = (menu) => {
     setActiveDropdown(menu);
@@ -12,9 +14,45 @@ export default function Header() {
     setActiveDropdown(null);
   };
 
+  const isActive = (path) => location.pathname === path;
+
+  useEffect(() => {
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        // Scroll down
+        setHeaderVisible(false);
+      } else {
+        // Scroll up
+        setHeaderVisible(true);
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header style={{ position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 10 }}>
+      <header
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          zIndex: 10,
+          opacity: headerVisible ? 1 : 0,
+          transition: 'opacity 0.2s ease-in-out',
+        }}
+      >
         <nav className="px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link to="/home" className="flex items-center">
@@ -28,12 +66,12 @@ export default function Header() {
               </span>
             </Link>
             <div className="flex items-center lg:order-2">
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
               >
                 Contact Us
-              </a>
+              </Link>
               <button
                 data-collapse-toggle="mobile-menu-2"
                 type="button"
@@ -62,7 +100,7 @@ export default function Header() {
                 >
                   <path
                     fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414z"
                     clipRule="evenodd"
                   ></path>
                 </svg>
@@ -80,7 +118,9 @@ export default function Header() {
                 >
                   <Link
                     to="/home"
-                    className="block py-2 pr-4 pl-3 text-white rounded lg:bg-transparent lg:text-white lg:p-0"
+                    className={`block py-2 pr-4 pl-3 ${
+                      isActive('/home') ? 'text-teal-300' : 'text-white'
+                    } rounded lg:bg-transparent lg:p-0 lg:hover:text-teal-300`}
                   >
                     Home
                   </Link>
@@ -92,7 +132,9 @@ export default function Header() {
                 >
                   <Link
                     to="/services"
-                    className="block py-2 pr-4 pl-3 text-white lg:hover:text-primary-700 lg:p-0"
+                    className={`block py-2 pr-4 pl-3 ${
+                      isActive('/services') ? 'text-teal-300' : 'text-white'
+                    } lg:hover:text-teal-300 lg:p-0`}
                   >
                     Services
                   </Link>
@@ -104,15 +146,19 @@ export default function Header() {
                 >
                   <Link
                     to="/industries"
-                    className="block py-2 pr-4 pl-3 text-white lg:hover:text-primary-700 lg:p-0"
+                    className={`block py-2 pr-4 pl-3 ${
+                      isActive('/industries') ? 'text-teal-300' : 'text-white'
+                    } lg:hover:text-teal-300 lg:p-0`}
                   >
                     Industries
                   </Link>
                 </li>
                 <li>
-                  <Link 
+                  <Link
                     to="/team"
-                    className="block py-2 pr-4 pl-3 text-white lg:hover:text-primary-700 lg:p-0"
+                    className={`block py-2 pr-4 pl-3 ${
+                      isActive('/team') ? 'text-teal-300' : 'text-white'
+                    } lg:hover:text-teal-300 lg:p-0`}
                   >
                     Team
                   </Link>

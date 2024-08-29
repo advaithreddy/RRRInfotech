@@ -56,7 +56,7 @@ function Home() {
                         Creating Opportunities
                     </p>
                     <Link 
-                        to="/services" 
+                        to="/about" 
                         style={{
                             marginTop: '20px',
                             padding: '10px 20px',
