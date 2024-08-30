@@ -23,7 +23,7 @@ function Contact() {
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-pink-800 dark:text-white">
                         Contact Us
                     </h2>
-                    <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+                    <p className="mb-8 lg:mb-12 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
                     Looking for insights into the current job market? Need information about job openings in various industries? We're here to help with the latest trends and opportunities. Let us know how we can assist you.
                     </p>
                     <form action="#" className="space-y-8">
