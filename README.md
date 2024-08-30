@@ -1,9 +1,15 @@
-# React + Vite
+# Arc Technlogies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Us
+About us,Arc Technologies, founded in 2023, is dedicated to connecting businesses with top talent across IT, healthcare, and non-IT sectors. Our mission is to empower organizations by delivering exceptional staffing and recruitment services, tailored to meet each client’s specific needs.
 
-Currently, two official plugins are available:
+Driven by a passion for excellence, we are committed to building lasting relationships with both clients and candidates. We achieve this through personalized service, unwavering transparency, and the highest standards of professionalism.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Arctechnolgies
+## Our Team
+* Akanksh Ch
+* Raj kumar
+* Mahesh
+
+Please do Check our [Privacy & Policy](paste url)
+
+Website Design Done by [Advaith Reddy](https://github.com/advaithreddy)
