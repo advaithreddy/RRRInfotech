@@ -62,7 +62,7 @@ export default function Header() {
                 alt="Arc Technologies Logo"
               />
               <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
-                Arc Technologies
+                Arc Technolgies
               </span>
             </Link>
             <div className="flex items-center lg:order-2">
