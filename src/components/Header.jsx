@@ -59,7 +59,7 @@ export default function Header() {
               <img
                 src="/src/assets/images/RRRlogo.svg"
                 className="mr-3 h-6 sm:h-9"
-                alt="Arc Technologies Logo"
+                alt="RRR Infotech Logo"
               />
               <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
                 RRR Infotech

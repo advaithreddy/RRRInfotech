@@ -61,7 +61,7 @@ function PandP() {
                     <p>
                         If you have any questions about this Privacy Policy, please contact us at  
                         <a 
-                            href="mailto:Akanksh@Arctechnolgies.com" 
+                            href="mailto:Hello@rrrinfotech.com" 
                             style={emailStyle}
                             onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(false)}
