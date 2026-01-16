@@ -12,9 +12,9 @@ export default function Footer() {
           {/* Corporate Office */}
           <div>
             <h2 className="text-white font-semibold mb-4">Corporate Office</h2>
-            <p>Houston, Texas, 77063</p>
-            <p>Phone: +1 (567) 246-3245</p>
-            <p>Email: Akanksh@Arctechnolgies.com</p>
+            <p>450 Century Parkway suite 260, Allen Texas, 75002</p>
+            <p>Phone: +1 (234) 567-9486</p>
+            <p>Email: Hello@rrrinfotech.com</p>
           </div>
 
           {/* Services */}
@@ -68,7 +68,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} ArcTech. All rights reserved.</p>
+          <p>&copy; {currentYear} RRR Infotech. All rights reserved.</p>
         </div>
       </div>
     </footer>

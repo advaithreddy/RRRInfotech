@@ -57,12 +57,12 @@ export default function Header() {
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link to="/home" className="flex items-center">
               <img
-                src="/src/assets/images/logo.svg"
+                src="/src/assets/images/RRRlogo.svg"
                 className="mr-3 h-6 sm:h-9"
                 alt="Arc Technologies Logo"
               />
               <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
-                Arc Technolgies
+                RRR Infotech
               </span>
             </Link>
             <div className="flex items-center lg:order-2">

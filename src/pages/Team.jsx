@@ -68,7 +68,7 @@ function Team() {
                 {/* Content Below Image */}
                 <div style={contentStyle}>
                     <h1 style={headingStyle}>Team</h1>
-                    <p style={subheadingStyle}>Meet the team behind Arc Technolgies.</p>
+                    <p style={subheadingStyle}>Meet the team behind RRR Infotech.</p>
                     <div style={cardContainerStyle}>
                         <div style={cardStyle}>
                             <h2 style={nameStyle}>Akanksh Ch</h2>

@@ -66,7 +66,7 @@ function PandP() {
                             onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(false)}
                         >
-                            Akanksh@Arctechnolgies.com
+                            Hello@rrrinfotech.com
                         </a>.
                     </p>
                 </div>
