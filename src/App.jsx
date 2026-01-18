@@ -9,7 +9,7 @@ const { Team, About, Home, Services, Industries, PandP, Contact } = pages;
 
 function App() {
   return (
-    <Router basename="/RRRInfotech">
+    <Router>
       {/* <Header /> */}
       <ScrollToTop/>
       <Routes>
