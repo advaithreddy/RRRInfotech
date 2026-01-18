@@ -49,6 +49,7 @@ function Contact() {
             name="contact"
             method="POST"
             data-netlify="true"
+            action="/thank-you"
             className="space-y-8"
           >
             {/* REQUIRED hidden field */}
