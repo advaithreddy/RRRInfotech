@@ -6,9 +6,9 @@ function Team() {
     const containerStyle = {
         position: 'relative',
         zIndex: 1,
-        height: '100vh',
-        paddingBottom: '150px', // Increase space for the footer
+        minHeight: '100vh',   // ✅ important
     };
+
 
     const imageStyle = {
         height: '50vh',
@@ -36,11 +36,12 @@ function Team() {
 
     const cardContainerStyle = {
         display: 'flex',
-        justifyContent: 'center', // Center cards horizontally
-        flexWrap: 'wrap', // Allow cards to wrap on smaller screens
-        gap: '25px', // Space between cards
-        marginBottom: '100px', // Add margin to ensure space between cards and footer
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        gap: '25px',
+        marginBottom: '60px', // spacing before footer
     };
+
 
     const cardStyle = {
         padding: '20px',

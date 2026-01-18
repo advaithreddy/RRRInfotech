@@ -1,0 +1,112 @@
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  height: 100%;
+  padding-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px;
+  text-align: center;
+}
+
+.service-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff9e6;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* INDUSTRIES */
+.industries {
+  padding: 60px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.industry-card {
+  padding: 20px;
+  background: #003366;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.industry-card:hover {
+  transform: scale(1.05);
+}
+
+/* CTA */
+.cta {
+  padding: 60px;
+  text-align: center;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #007bff;
+  color: white;
+}

@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/images/RRRlogo.svg';
+
 
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [headerVisible, setHeaderVisible] = useState(true);
+  const [isTop, setIsTop] = useState(true);
   const location = useLocation();
 
   const handleMouseEnter = (menu) => {
@@ -20,25 +23,30 @@ export default function Header() {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      // detect top
+      setIsTop(scrollTop === 0);
 
       if (scrollTop > lastScrollTop) {
-        // Scroll down
+        // scrolling down
         setHeaderVisible(false);
       } else {
-        // Scroll up
+        // scrolling up
         setHeaderVisible(true);
       }
 
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
   return (
     <>
@@ -50,14 +58,17 @@ export default function Header() {
           width: '100%',
           zIndex: 10,
           opacity: headerVisible ? 1 : 0,
-          transition: 'opacity 0.2s ease-in-out',
+          backgroundColor: isTop ? 'transparent' : 'rgba(0, 0, 0, 0.85)',
+          backdropFilter: isTop ? 'none' : 'blur(8px)',
+          transition:
+            'opacity 0.2s ease-in-out, background-color 0.3s ease',
         }}
       >
         <nav className="px-4 lg:px-6 py-2.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <Link to="/home" className="flex items-center">
               <img
-                src="/src/assets/images/RRRlogo.svg"
+                src={logo}
                 className="mr-3 h-6 sm:h-9"
                 alt="RRR Infotech Logo"
               />

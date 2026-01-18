@@ -44,7 +44,7 @@ function About() {
                 <div style={contentStyle}>
                     <h1 style={headingStyle}>About</h1>
                     <p style={paragraphStyle}>
-                        RRR Infotech, established in 2023, is a forward-thinking staffing and recruitment firm dedicated to bridging the gap between businesses and top-tier talent across diverse sectors, including IT, healthcare, and non-IT industries. Our core mission is to empower organizations by providing exceptional recruitment solutions tailored to their unique needs and challenges.
+                        RRR Infotech, established in 2022, is a forward-thinking staffing and recruitment firm dedicated to bridging the gap between businesses and top-tier talent across diverse sectors, including IT, healthcare, and non-IT industries. Our core mission is to empower organizations by providing exceptional recruitment solutions tailored to their unique needs and challenges.
                     </p>
                     <p style={paragraphStyle}>
                         At RRR Infotech, we understand that every business has distinct requirements when it comes to staffing. Whether it’s finding skilled IT professionals, healthcare experts, or talent in other fields, our team is committed to delivering tailored solutions that align with each client’s strategic goals. We take pride in our ability to connect companies with the right candidates who can drive their success and contribute to their growth.

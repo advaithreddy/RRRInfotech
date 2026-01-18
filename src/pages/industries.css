@@ -1,0 +1,55 @@
+.industries-page {
+  background: #a00f1e;
+  color: white;
+  min-height: 100vh;
+}
+
+.industries-hero {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.industries-section {
+  padding: 50px;
+}
+
+.industry-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.industry-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.industry-content {
+  flex: 0 0 60%;
+}
+
+.industry-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.industry-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.industry-image {
+  flex: 0 0 40%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.industry-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
