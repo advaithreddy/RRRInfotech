@@ -68,7 +68,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} RRR Infotech. All rights reserved.</p>
+          <p>&copy; 2022 RRR Infotech. All rights reserved.</p>
         </div>
       </div>
     </footer>
